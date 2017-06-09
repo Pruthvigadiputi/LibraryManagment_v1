@@ -14,12 +14,12 @@ public class BookServiceImpl implements BooksServices{
 	@Override
 	public boolean createBook(Books books) throws IOException {
 		// TODO Auto-generated method stub
-		books.setAuthor("Pruthvi");
+		/*books.setAuthor("Pruthvi");
 		books.setAvailble_flag(true);
 		books.setBook_Id("BK101");
 		books.setPrice("120");
 		books.setTitle("Throwns Of Ocean");
-		System.out.println(rf);
+		System.out.println(rf);*/
 		rf.createFileDocuments(LibraryConstants.bookFileName, books);
 		
 		return false;

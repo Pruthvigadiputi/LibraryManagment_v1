@@ -20,11 +20,12 @@ public class ReadFile {
 			System.out.println("File not exists");
 		}
 		FileReader fileReader=new FileReader(currFile);
-		ArrayList<Books> data = null;
+		ArrayList<Books> data = new ArrayList<Books>();
 		BufferedReader bufferedReader=new BufferedReader(fileReader);
 		String s;
 		while((s = bufferedReader.readLine()) != null)
 		{
+			System.out.println("s::"+s);
 			data.add(dataSplitior(s,"books"));
 		}
 		return data;
@@ -68,7 +69,7 @@ public class ReadFile {
 		switch (fileName) {
 		case "books":
 			Books bk=new Books();
-			String data[]=s.split("||");
+			String data[]=s.split("\\|");
 			bk.setBook_Id(data[0]);
 			bk.setTitle(data[1]);
 			bk.setAuthor(data[2]);

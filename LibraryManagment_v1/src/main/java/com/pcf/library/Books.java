@@ -55,7 +55,7 @@ public class Books {
 	
 	public String createDocument()
 	{
-		return book_Id+"||"+title+"||"+author+"||"+availble_flag+"||"+price;
+		return book_Id+"|"+title+"|"+author+"|"+availble_flag+"|"+price;
 	}
 	
 }
